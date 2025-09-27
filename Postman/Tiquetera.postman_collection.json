@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "fc801356-f178-4716-bc7c-1099cc43b740",
+		"name": "Tiquetera",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33662140"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/user/privilegios",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImFlYzU4NjcwNGNhOTZiZDcwMzZiMmYwZDI4MGY5NDlmM2E5NzZkMzgiLCJ0eXAiOiJKV1QifQ.eyJwcml2aWxlZ2lvcyI6eyJzdXBlckFkbWluIjp0cnVlfSwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL3RpcXVldGVyYS1lY2JmMyIsImF1ZCI6InRpcXVldGVyYS1lY2JmMyIsImF1dGhfdGltZSI6MTcwNzY5MzU0MSwidXNlcl9pZCI6InJOa1d5Vm9Ddm1NY0hTb2ZSN2dydWZiSVZhajIiLCJzdWIiOiJyTmtXeVZvQ3ZtTWNIU29mUjdncnVmYklWYWoyIiwiaWF0IjoxNzA3NjkzNTQxLCJleHAiOjE3MDc2OTcxNDEsImVtYWlsIjoib3NAdGlxdWV0ZXJhLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJvc0B0aXF1ZXRlcmEuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.OGvG-fQTN13c7PX1BLvxYaztbRWMUagDZZzZLuTVGEnePcv6v2r_lKNeBmSoiELlSzWbXUov312wMSNsi4eKAgBwtXQLxEkM3X8Vh8ZzqFTlgEw95J-XO5tU25TSfVBA6SujcGCQMMmf4LGES0oSZFKwKI1g79fEO5T7H_TWtGjaI9Cc3VUUeE3deGq4nrH-ciAO2WaRGgkr-NG4IGNC8CQgu93PHDi53UwIsfpJFUedD1DzfJrB-Q0fHdgQkxoUaQJTo9qOYE8l9AAC3-Zu3NmahCUStZdZm7cNssPE0mDKZNVY2i-rJgsrwGpRVqtPYu3-1A9Ii9rZCIqwW_I2Ow\",\n    \"uid\":\"rNkWyVoCvmMcHSofR7grufbIVaj2\",\n    \"privilegios\":{\n        \"superAdmin\":true\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/privilegios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"privilegios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/user/crearUsuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "Application/JSON"
+					  },
+					  {
+						"key": "token",
+						"value": "token_value"
+					  }
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"uid\":\"xFqkFMxGiV5OrNH8CqDb\",\n    \"email\":\"nose2@nose.com\",\n    \"privilegios\":{\n        \"superAdmin\":true\n        }\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/crearUsuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"crearUsuario"
+					]
+				}
+			},
+			"response": []
+		},		
+		{
+			"name": "http://localhost:3000/user/eliminarUsuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "Application/JSON"
+					  },
+					  {
+						"key": "token",
+						"value": "token_value"
+					  }
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"uid\":\"xFqkFMxGiV5OrNH8CqDb\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/eliminarUsuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"eliminarUsuario"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
